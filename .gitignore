@@ -1,0 +1,7 @@
+/.DS_Store
+/.idea
+
+/help_info/*
+
+# Should be uncommented in real project usage
+# /config/secrets.yml
