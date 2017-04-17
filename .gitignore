@@ -3,5 +3,5 @@
 
 /help_info/*
 
-# Should be uncommented in real project usage
-# /config/secrets.yml
+# Should be commented in real project usage
+/config/secrets.yml
