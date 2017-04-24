@@ -1,12 +1,10 @@
 # Validation for JWT marker 'Payload'
 
-%w{helpers predicates}.each { |path|
-  require "#{CONFIG[:lib_path]}/token/validation/#{path}"
-}
+Dir["#{CONFIG[:lib_path]}/token/validation/*.rb"].each(&method(:require))
 
 module Token
   module Validation
-    # Regex for check valid format for different values
+    # Regex's for check valid format for different values
     USER_ID_FORMAT = /^[a-z0-9]*$+/.freeze
     EMAIL_FORMAT = /^[a-z0-9].+@.+\..+/.freeze
     ADDITIONAL_KEY_FORMAT = /^[a-z0-9]*_?[a-z0-9]+$/.freeze

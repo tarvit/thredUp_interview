@@ -45,6 +45,7 @@ module Token
 
     private
 
+    # Check is all 'required keys' exist in received 'Payload' hash.
     def required_keys_exist?(payload_hash)
       received_keys = payload_hash.keys
 

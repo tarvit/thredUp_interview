@@ -8,7 +8,7 @@ module Token
       include Token::Validation
 
       # Receive, validate and return required 'key/value' pair in 'Hash' format from 'CLI'
-      # Number of tries - 3
+      # 'Number of tries' - 3
       def get_required_pair(key)
         key = key.to_sym
         tries = 3
@@ -33,7 +33,7 @@ module Token
       end
 
       # Receive, validate and return additional 'key/value' pair in 'Hash' format from 'CLI'
-      # Number of tries - 1
+      # 'Number of tries' - 1
       def get_additional_pair
         begin
           key = get_value('additional key').downcase.to_sym

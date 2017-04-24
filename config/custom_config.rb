@@ -11,5 +11,5 @@ CONFIG[:lib_path] = "#{CONFIG[:root_path]}/lib"
 # Add project 'secret_key' to environment
 CONFIG[:secret_key] = YAML.load_file("#{CONFIG[:config_path]}/secrets.yml")['JWT_SECRET']
 
-# Make custom environment config immutable
+# Make 'custom' environment config immutable
 CONFIG.freeze
