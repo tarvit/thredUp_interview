@@ -1,6 +1,6 @@
 # Service for receiving keys and their values for JWT marker 'Payload'
 
-require_relative 'validation'
+require "#{CONFIG[:lib_path]}/token/validation"
 
 module Token
   class Receiver

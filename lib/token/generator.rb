@@ -4,7 +4,7 @@
 # Generator using static algorithm – 'HS256' in 'Header'
 # Algorithm flexibility could be easily changed when it will be needed
 
-require_relative 'validation/helpers'
+require "#{CONFIG[:lib_path]}/token/validation/helpers"
 
 module Token
   class Generator
@@ -36,7 +36,7 @@ module Token
       # Transfer prepared 'signature' and 'secret_token' to encryption algorithm specified in 'Header' key :alg
       digital_alg = DIGITAL_ALGORITHM[HEADER[:alg]]
       digest = OpenSSL::Digest.new(digital_alg)
-      signature = OpenSSL::HMAC.digest(digest, CUSTOM_CONFIG[:secret_key], prepared_signature)
+      signature = OpenSSL::HMAC.digest(digest, CONFIG[:secret_key], prepared_signature)
       encoded_signature = Base64.urlsafe_encode64(signature)
 
       # Return concatenated prepared and encoded 'signature' via dot

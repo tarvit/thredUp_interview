@@ -1,7 +1,8 @@
 # Validation for JWT marker 'Payload'
 
-require_relative 'validation/helpers'
-require_relative 'validation/predicates'
+%w{helpers predicates}.each { |path|
+  require "#{CONFIG[:lib_path]}/token/validation/#{path}"
+}
 
 module Token
   module Validation

@@ -1,4 +1,6 @@
-require_relative 'config/application'
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/application', __FILE__)
 
 puts 'Starting JWT payload receiving'
 generated_hash = {}

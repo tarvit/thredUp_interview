@@ -1,4 +1,4 @@
-require_relative '../config/application'
+require File.expand_path('../../config/application', __FILE__)
 
 RSpec.configure { |config|
   config.expect_with(:rspec) { |expectations|

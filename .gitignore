@@ -5,3 +5,4 @@
 
 # Should be commented in real project usage
 /config/secrets.yml
+help_info/
