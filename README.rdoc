@@ -1,1 +1,6 @@
 JSON Web Tokens generation from CLI.
+
+For run generator script from CLI:
+  1) Go to project root folder.
+  2) Run 'bundle install' command.
+  3) Execute next command – bin/jwt_gen.
